@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+
+  }
+  
+  body {
+    background-color: rgb(253, 253, 253);
+    color: rgb(5, 5, 5);
+    font-family: "Poppins", sans-serif;
+    border: 2px solid black;
+
+  }
+  
+  /* NAV BAR */
+  .nav__flex__container {
+    background-color: white;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    padding: 3% 5%;
+    z-index: 10;
+    align-content: center;
+    border: 2px solid black;
+
+  }
+  .logo__container{
+    margin-left: -18px;
+    width: 100px;
+    height: 40px;
+    border: 2px solid black;
+  }
+  .logo{
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+  }
+
+  /* tooltip */
+  .category__tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  .category__tooltip .category__tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(253, 253, 253);
+    color: rgb(8, 8, 8);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+  }
+  .category__tooltiptext{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+  .anchor__container{
+    display: flex;
+    justify-content: space-between;
+  }
+  .category__tooltip:hover .category__tooltiptext {
+    visibility: visible;
+  }
+
+  /* sub tooltip */
+  .sub_category__tooltip .sub_category__tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(253, 253, 253);
+    color: rgb(8, 8, 8);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 120%;
+    margin-left: -60px;
+  }
+  .sub_category__tooltip:hover .sub_category__tooltiptext {
+    visibility: visible;
+  }
+  .sub_category__tooltiptext{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .input__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: transparent;
+    width: 35%;
+    height: 50px;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 20px;
+  }
+  input{
+    width: 90%;
+    height: 100%;
+    border-radius: 20px;
+  }
+  .fa-search{
+    width: 30px;
+    height: 30px;
+
+  }
+  .button__flex__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  /* section one */
+  .section__one{
+    background-image: url("udemy-home.jpg");
+    width: 100%;
+    height: 70vh;
+    margin-top: 5%;
+  }
+  .section_one_text{
+    position: absolute;
+    background-color: white;
+    top: 25%;
+    left: 8%;
+    width: 33%;
+    height: 23vh;
+  }
+  .section_one_text>p{
+    margin: 10px;
+  }
+  .section_one_text>h1{
+    margin: 10px;
+  }
