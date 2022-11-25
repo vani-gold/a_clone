@@ -1,17 +1,16 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
     box-sizing: border-box;
     border: 2px solid black;
-
   }
   
   body {
     background-color: rgb(253, 253, 253);
     color: rgb(5, 5, 5);
     font-family: "Poppins", sans-serif;
-    border: 2px solid black;
-
   }
   
   /* NAV BAR */
@@ -28,26 +27,21 @@
     padding: 3% 5%;
     z-index: 10;
     align-content: center;
-    border: 2px solid black;
-
   }
   .logo__container{
     margin-left: -18px;
     width: 100px;
     height: 40px;
-    border: 2px solid black;
   }
   .logo{
     width: 100%;
     height: 100%;
-    border: 2px solid black;
   }
 
   /* tooltip */
   .category__tooltip {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black;
   }
   .category__tooltip .category__tooltiptext {
     visibility: hidden;
@@ -131,6 +125,9 @@
     align-items: center;
   }
   /* section one */
+  .from_section_two_wrapper{
+    margin: 20px;
+  }
   .section__one{
     background-image: url("udemy-home.jpg");
     width: 100%;
@@ -151,3 +148,220 @@
   .section_one_text>h1{
     margin: 10px;
   }
+  .video__box{
+    background-color: transparent;
+    width: 100%;
+    height: 142px;
+  }
+  .all_section3_card{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  .card_image{
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    overflow-wrap: unset;
+  }
+
+  .section_three_cards{
+    width: 300px;
+  }
+
+/* image section3 tooltip left*/
+  .tooltip_left {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip_left .tooltiptext_left {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 100%;
+  }
+  
+  .tooltip_left .tooltiptext_left::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
+  }
+  .tooltip_left:hover .tooltiptext_left {
+    visibility: visible;
+  }
+
+  /* image section3 tooltip right*/
+  .tooltip_right {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip_right .tooltiptext_right {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 100%;
+  }
+  
+  .tooltip_right .tooltiptext_right::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
+  }
+  .tooltip_right:hover .tooltiptext_right {
+    visibility: visible;
+  }
+
+  /* section3 text styling */
+  h5{
+    font-size: 15px;
+  }
+  .light_text{
+    font-size:11px ;
+    color: rgb(112, 110, 110);
+  }
+  .light_number{
+    font-size:14px ;
+    color: rgb(112, 110, 110);
+  }
+  .stars{
+    color: rgb(201, 140, 8);
+    align-items: baseline;
+    height: 25px;
+
+  }
+  .strong{
+    /* font-size: small; */
+    height: 5px;
+    height: 3px;
+  }
+
+  .star_image{
+    width: 100px;
+    height: 100%;
+  }
+
+  /* section five */
+  .flex{
+    display: flex;
+    justify-content: space-between;
+  }
+.business_image{
+  width: 100%;
+  height: 60vh;
+}
+footer{
+  height: 50vh;
+  background-color: black;
+  margin-bottom: 0;
+}
+/* pop up window */
+.box {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0);
+  padding: 35px;
+  /* border: 2px solid #fff; */
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #ffffff;
+  /* border-radius: 20px/50px; */
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #616462;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06d85e00;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+/* @media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+} */
