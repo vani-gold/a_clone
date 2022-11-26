@@ -4,7 +4,7 @@
     padding-left: 0;
     padding-right: 0;
     box-sizing: border-box;
-    border: 2px solid black;
+    /* border: 2px solid black; */
   }
   
   body {
@@ -24,9 +24,10 @@
     align-items: center;
     justify-items: center;
     justify-content: space-between;
-    padding: 3% 5%;
+    padding: 3% 2%;
     z-index: 10;
     align-content: center;
+    font-size: 13px;
   }
   .logo__container{
     margin-left: -18px;
@@ -37,7 +38,6 @@
     width: 100%;
     height: 100%;
   }
-
   /* tooltip */
   .category__tooltip {
     position: relative;
@@ -45,11 +45,11 @@
   }
   .category__tooltip .category__tooltiptext {
     visibility: hidden;
-    width: 300px;
+    width: 250px;
     background-color: rgb(253, 253, 253);
     color: rgb(8, 8, 8);
     text-align: center;
-    border-radius: 6px;
+    /* border-radius: 6px; */
     padding: 5px 0;
   
     /* Position the tooltip */
@@ -67,26 +67,33 @@
   .anchor__container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
-  .category__tooltip:hover .category__tooltiptext {
-    visibility: visible;
+
+  a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    line-height: 1.9rem;
+  }
+  .fa-search{
+    color: #898b8a;
   }
 
   /* sub tooltip */
   .sub_category__tooltip .sub_category__tooltiptext {
     visibility: hidden;
-    width: 300px;
+    width: 250px;
     background-color: rgb(253, 253, 253);
     color: rgb(8, 8, 8);
     text-align: center;
-    border-radius: 6px;
     padding: 5px 0;
-    
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
     top: 0;
-    left: 120%;
+    left: 124%;
+    border-left:2px solid rgb(83, 81, 81);
     margin-left: -60px;
   }
   .sub_category__tooltip:hover .sub_category__tooltiptext {
@@ -103,27 +110,53 @@
     justify-content: space-between;
     align-items: center;
     color: transparent;
-    width: 35%;
-    height: 50px;
+    width: 41%;
+    height: 47px;
     position: relative;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 20px;
+    background-color: #f6f8f6;
   }
   input{
-    width: 90%;
+    width: 97%;
     height: 100%;
     border-radius: 20px;
+    outline: none;
+    background-color: #f6f8f6;
   }
   .fa-search{
     width: 30px;
     height: 30px;
-
   }
   .button__flex__container{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 6px;
   }
+  .login_btn, .signup_btn{
+    width: 80px;
+    height: 43px;
+    font-family: udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.02rem;
+    font-size: 1rem;
+  }
+  .login_btn{
+    background-color: white;
+    color: black;
+  }
+  .signup_btn{
+    background-color: black;
+    color: white;
+  }
+  .globe{
+    border: 1px solid black;
+    align-items: center;
+    padding: 10px;
+  }
+
   /* section one */
   .from_section_two_wrapper{
     margin: 20px;
@@ -148,126 +181,224 @@
   .section_one_text>h1{
     margin: 10px;
   }
+
+
+  /* section two */
+  .sec_two_h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100px;
+    font-size: 40px;
+  }
+  .course{
+    font-weight: bold;
+    color: rgb(112, 109, 109);
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    padding: 0 9px;
+  }
+  .python{
+    font-weight: bold;
+    color: rgb(8, 8, 8);
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+  }
+/* SECTION THREE */
+  .all_section3_card{
+    display: flex;
+    justify-content: space-between;
+  }
   .video__box{
     background-color: transparent;
     width: 100%;
     height: 142px;
-  }
-  .all_section3_card{
-    display: flex;
-    gap: 10px;
-    justify-content: space-between;
   }
   .card_image{
     width: 100%;
     height: 100%;
     align-content: center;
     overflow-wrap: unset;
+    position: relative;
+    z-index: -1;
   }
-
   .section_three_cards{
-    width: 300px;
+    width: 230px;
   }
-
-/* image section3 tooltip left*/
   .tooltip_left {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black;
+  }
+  .tootip_div>ul {
+    list-style: none;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+
   }
   
+  .tootip_div>ul li:before {
+    content: '✓';
+  }
+  
+  /* image section3 tooltip left*/
   .tooltip_left .tooltiptext_left {
+    font-size: 15px;
     visibility: hidden;
-    width: 300px;
+    width: 370px;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-    text-align: center;
+    text-align:left;
     border-radius: 6px;
-    padding: 5px 0;
+    /* margin: 5px 0px; */
+    padding: 5px 0px;
     position: absolute;
     z-index: 1;
-    top: -5px;
+    top: -120px;
     left: 100%;
   }
-  
   .tooltip_left .tooltiptext_left::after {
     content: "";
     position: absolute;
     top: 50%;
-    left: 100%;
+    right: 100%;
     margin-top: -5px;
-    border-width: 5px;
+    border-width: 15px;
     border-style: solid;
-    border-color: transparent transparent transparent black;
+    border-color: transparent rgb(243, 232, 232) transparent transparent;
+    
   }
   .tooltip_left:hover .tooltiptext_left {
     visibility: visible;
   }
-
-  /* image section3 tooltip right*/
-  .tooltip_right {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
+  .tooltip_h3{
+    padding: 0;
+    margin: 0;
   }
-  
-  .tooltip_right .tooltiptext_right {
-    visibility: hidden;
-    width: 300px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    top: -5px;
-    right: 100%;
+  .update{
+    color: rgb(9, 129, 83);
+    font-size: 11px;
   }
-  
-  .tooltip_right .tooltiptext_right::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    margin-top: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent transparent black;
+  .tooltip_para{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 14px;
+    line-height: 20px
   }
-  .tooltip_right:hover .tooltiptext_right {
-    visibility: visible;
-  }
-
   /* section3 text styling */
-  h5{
+  .sec_three_text{
+    border: 1px solid rgb(214, 207, 207);
+  }
+  .section__three{
+    border: 1px solid rgb(214, 207, 207);
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+     margin-top: 1%;
+  }
+  .video__box_one{
+    border: 1px solid rgb(214, 207, 207);
+  }
+  .white_Python_btn{
+    background-color: white;
+    width: 120px;
+    height: 40px;
+    font-weight: bold;
+    margin-bottom: 3%;
+    border: 1px solid rgb(41, 39, 39);
+  }
+  .sec_three_h2{
+    padding-top: 1%;
+    font-size:22px ;
+  }  
+  .sec_3_paragraph{
     font-size: 15px;
+  }
+  h5{
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
   }
   .light_text{
     font-size:11px ;
     color: rgb(112, 110, 110);
+    padding: 0;
+    margin: 0;
   }
   .light_number{
-    font-size:14px ;
+    font-size:12px ;
     color: rgb(112, 110, 110);
   }
   .stars{
     color: rgb(201, 140, 8);
     align-items: baseline;
-    height: 25px;
-
+    height: 10px;
   }
   .strong{
-    /* font-size: small; */
     height: 5px;
     height: 3px;
   }
-
   .star_image{
-    width: 100px;
+    width: 70px;
     height: 100%;
   }
-
+.bestseller{
+  font-weight: bold;
+  width: 35%;
+  height: 26px;
+  color: rgb(63, 48, 7);
+  border: 0;
+  background-color:#eceb98;
+}
+ /* image section3 tooltip right*/
+ .tootip_div{
+  border: 1px solid rgb(194, 186, 186);
+  padding: 20px;
+}
+.tooltip_right {
+  position: relative;
+  display: inline-block;
+}
+.tooltip_right .tooltiptext_right {
+  visibility: hidden;
+  width: 300px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: 100%;
+}
+.tooltip_right .tooltiptext_right::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+.tooltip_right:hover .tooltiptext_right {
+  visibility: visible;
+}
+.add_to_Cart_btn{
+  width: 70%;
+  height: 50px;
+  background-color: #a435f0;
+  border: 1px solid transparent;
+  margin-right: 10px;
+}
+  .tooltip_btn_div{
+    display: flex;
+    align-items: center;
+    /* border: 1px solid rgb(15, 15, 15); */
+    align-content: center;
+  }
+  .fa-heart{
+    border: 1px solid rgb(15, 15, 15);
+    color: #020202;
+    border-radius: 25px;
+    padding: 10px;
+  }
   /* section five */
   .flex{
     display: flex;
@@ -293,13 +424,11 @@ footer{
   background-clip: padding-box;
   text-align: center;
 }
-
 .button {
   font-size: 1em;
   padding: 10px;
   color: #fff;
   border: 2px solid #ffffff;
-  /* border-radius: 20px/50px; */
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease-out;
@@ -307,7 +436,6 @@ footer{
 .button:hover {
   background: #616462;
 }
-
 .overlay {
   position: fixed;
   top: 0;
@@ -323,7 +451,6 @@ footer{
   visibility: visible;
   opacity: 1;
 }
-
 .popup {
   margin: 70px auto;
   padding: 20px;
@@ -333,7 +460,6 @@ footer{
   position: relative;
   transition: all 5s ease-in-out;
 }
-
 .popup h2 {
   margin-top: 0;
   color: #333;
@@ -356,6 +482,77 @@ footer{
   max-height: 30%;
   overflow: auto;
 }
+
+  /* hover effects */
+  .category__tooltip:hover .category__tooltiptext {
+    visibility: visible;
+  }
+  .category__tooltip:hover {
+    color: rgb(135, 9, 238);
+  }
+  .udemy_business:hover {
+    color: rgb(135, 9, 238);
+  }
+  
+  .teach_on_udemy:hover {
+    color: rgb(135, 9, 238);
+  }
+
+  .sub_category__tooltiptext:hover{
+    color: rgb(135, 9, 238);
+  }
+  .cat_tooltext:hover {
+    color: rgb(135, 9, 238);
+  }
+  .fa-shopping-cart:hover{
+    color: rgb(135, 9, 238);
+  }
+  .login_btn:hover{
+    background-color: rgb(240, 240, 243);
+  }
+  .globe:hover{
+    background-color: rgb(240, 240, 243);
+  }
+  .course:hover{
+   color: rgb(2, 2, 2);
+  }
+  .video__box:hover{
+    background-color: rgba(64, 56, 80, 0.199);
+   }
+
+
+
+
+
+
+/* Button */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* @media screen and (max-width: 700px){
   .box{
