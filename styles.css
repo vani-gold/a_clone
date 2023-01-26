@@ -1,6 +1,7 @@
 * {
-    padding: 0;
-    margin: 0;
+    /* padding: 0px;
+    margin: 0px; */
+
     box-sizing: border-box;
     /* border: 2px solid black; */
   }
@@ -9,6 +10,7 @@
     /* background-color: rgb(253, 253, 253); */
     color: rgb(5, 5, 5);
     font-family: "Poppins", sans-serif;
+    /* font-size: 18px; */
   }
   
   /* NAV BAR */
@@ -25,7 +27,16 @@
     padding: 3% 2%;
     z-index: 10;
     align-content: center;
-    font-size: 13px;
+    font-size: 16px;
+  }
+  .black_friday{
+    font-size: 18px;
+    font-weight: 800;
+  }
+  .padding_top_10{
+    padding-top: 30px;
+    
+    /* margin: 20px; */
   }
   .logo__container{
     margin-left: -18px;
@@ -208,8 +219,8 @@
     background-color: white;
     top: 25%;
     left: 8%;
-    width: 33%;
-    height: 23vh;
+    width: 25%;
+    height: 20vh;
   }
   .section_one_text>p{
     margin: 10px;
